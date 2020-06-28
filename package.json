@@ -1,9 +1,9 @@
 {
   "name": "@composita/ts-utility-types",
-  "version": "0.1.0-dev.1",
+  "version": "0.1.0-dev.2",
   "description": "TypeScript utility types used in the Composita system.",
-  "main": "dist/cjs/types.js",
-  "module": "dist/esm/types.js",
+  "main": "dist/cjs/types.cjs",
+  "module": "dist/esm/types.mjs",
   "types": "dist/types/types.d.ts",
   "type": "module",
   "files": [
@@ -11,8 +11,10 @@
     "src"
   ],
   "scripts": {
-    "ts:cjs": "tsc -p ts/cjs.tsconfig.json",
-    "ts:esm": "tsc -p ts/esm.tsconfig.json",
+    "fix:cjs": "yarn renamer --find js --replace cjs 'dist/cjs/*'",
+    "fix:esm": "yarn renamer --find js --replace mjs 'dist/esm/*'",
+    "ts:cjs": "tsc -p ts/cjs.tsconfig.json && yarn fix:cjs",
+    "ts:esm": "tsc -p ts/esm.tsconfig.json && yarn fix:esm",
     "ts:typedefs": "tsc -p ts/types.tsconfig.json",
     "ts:all": "yarn ts:cjs && yarn ts:esm && yarn ts:typedefs",
     "build": "yarn clean && yarn ts:all",
@@ -48,6 +50,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
+    "renamer": "^2.0.1",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
