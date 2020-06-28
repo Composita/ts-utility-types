@@ -1,6 +1,6 @@
-# Composita language lexer
+# Typescript Utility Types
 
-The repository contains the lexer for the Composita language implemented in typescript.
+The repository contains small TypeScript utility types.
 
 ![Build Badge](https://github.com/composita/lexer/workflows/build/badge.svg)
 
