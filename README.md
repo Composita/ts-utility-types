@@ -2,7 +2,7 @@
 
 The repository contains small TypeScript utility types.
 
-![Build Badge](https://github.com/composita/lexer/workflows/build/badge.svg)
+![Build Badge](https://github.com/composita/ts-utility-types/workflows/build/badge.svg)
 
 ## License
 
