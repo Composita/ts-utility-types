@@ -1,6 +1,6 @@
 {
   "name": "@composita/ts-utility-types",
-  "version": "0.1.0-dev.3",
+  "version": "0.1.0-dev.4",
   "description": "TypeScript utility types used in the Composita system.",
   "main": "dist/cjs/types.cjs",
   "module": "dist/esm/types.mjs",
@@ -11,8 +11,8 @@
     "src"
   ],
   "scripts": {
-    "fix:cjs": "yarn renamer --find js --replace cjs 'dist/cjs/**'",
-    "fix:esm": "yarn renamer --find js --replace mjs 'dist/esm/**'",
+    "fix:cjs": "yarn renamer --find '/\\.js/' --replace '.cjs' 'dist/cjs/**'",
+    "fix:esm": "yarn renamer --find '/\\.js/' --replace '.mjs' 'dist/esm/**'",
     "ts:cjs": "tsc -p ts/cjs.tsconfig.json && yarn fix:cjs",
     "ts:esm": "tsc -p ts/esm.tsconfig.json && yarn fix:esm",
     "ts:typedefs": "tsc -p ts/types.tsconfig.json",
