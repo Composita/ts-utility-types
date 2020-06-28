@@ -1,6 +1,6 @@
 {
   "name": "@composita/ts-utility-types",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.0-dev.1",
   "description": "TypeScript utility types used in the Composita system.",
   "main": "dist/cjs/types.js",
   "module": "dist/esm/types.js",
@@ -17,8 +17,8 @@
     "ts:all": "yarn ts:cjs && yarn ts:esm && yarn ts:typedefs",
     "build": "yarn clean && yarn ts:all",
     "clean": "rimraf dist",
-    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
-    "prepublishOnly": "yarn build",
+    "lint": "eslint 'src/**/*.ts'",
+    "prepublishOnly": "yarn lint && yarn build",
     "postpublish": "yarn clean"
   },
   "repository": {
