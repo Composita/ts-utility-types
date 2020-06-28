@@ -19,7 +19,7 @@
     "clean": "rimraf dist",
     "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
     "prepublishOnly": "yarn build",
-    "postpublish": "yarn clean",
+    "postpublish": "yarn clean"
   },
   "repository": {
     "type": "git",
