@@ -4,7 +4,7 @@
 		{
 			"type": "shell",
 			"label": "yarn: build",
-			"dependsOn": [ "yarn: test" ],
+			"dependsOn": [ "yarn: install" ],
 			"command": "yarn",
 			"args": [
 				"build"
@@ -16,12 +16,12 @@
 		},
 		{
 			"type": "shell",
-			"label": "yarn: test",
+			"label": "yarn: install",
 			"command": "yarn",
 			"args": [
-				"test"
+				"install"
 			],
-			"group": "test"
+			"group": "build"
 		}
 	]
 }
