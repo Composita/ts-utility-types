@@ -1,6 +1,21 @@
 export type Optional<T> = T | undefined;
 
-export type Constructable<T> = { new (...args: Array<never>): T };
+export type Constructable0<T> = { new (): T };
+export type Constructable1<T, P1> = { new (p1: P1): T };
+export type Constructable2<T, P1, P2> = { new (p1: P1, p2: P2): T };
+export type Constructable3<T, P1, P2, P3> = { new (p1: P1, p2: P2, p3: P3): T };
+export type Constructable4<T, P1, P2, P3, P4> = { new (p1: P1, p2: P2, p3: P3, p4: P4): T };
+export type Constructable5<T, P1, P2, P3, P4, P5> = { new (p1: P1, p2: P2, p3: P3, p4: P4, p5: P5): T };
+export type Constructable6<T, P1, P2, P3, P4, P5, P6> = { new (p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6): T };
+export type Constructable7<T, P1, P2, P3, P4, P5, P6, P7> = {
+    new (p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7): T;
+};
+export type Constructable8<T, P1, P2, P3, P4, P5, P6, P7, P8> = {
+    new (p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8): T;
+};
+export type Constructable9<T, P1, P2, P3, P4, P5, P6, P7, P8, P9> = {
+    new (p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9): T;
+};
 
 enum NonEmptyArrayTag {
     Tag,

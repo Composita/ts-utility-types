@@ -1,6 +1,6 @@
 {
   "name": "@composita/ts-utility-types",
-  "version": "0.1.0-dev.6",
+  "version": "0.1.0-dev.7",
   "description": "TypeScript utility types used in the Composita system.",
   "main": "dist/cjs/types.js",
   "module": "dist/esm/types.js",
