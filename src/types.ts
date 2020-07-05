@@ -1,5 +1,7 @@
 export type Optional<T> = T | undefined;
 
+export type Constructable<T> = { new (...args: Array<never>): T };
+
 enum NonEmptyArrayTag {
     Tag,
 }
