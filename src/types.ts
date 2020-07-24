@@ -17,6 +17,16 @@ export type Constructable9<T, P1, P2, P3, P4, P5, P6, P7, P8, P9> = {
     new (p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9): T;
 };
 
+export class Sleep {
+    static async forMilliseconds(ms: number): Promise<void> {
+        await new Promise<NodeJS.Timeout>((resolve) => setTimeout(resolve, ms));
+    }
+
+    static async forSeconds(s: number): Promise<void> {
+        await this.forMilliseconds(s * 1000);
+    }
+}
+
 enum NonEmptyArrayTag {
     Tag,
 }
