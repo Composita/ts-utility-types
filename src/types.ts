@@ -27,6 +27,23 @@ export class Sleep {
     }
 }
 
+export function getOrThrow<T>(value: Optional<T>): T {
+    if (value === undefined) {
+        throw new Error('Optional value not defined.');
+    }
+    return value;
+}
+
+export function getFirstOrThrow<T>(array: Array<T>): T {
+    if (array.length < 1) {
+        throw Error('Array contained no element.');
+    }
+    if (array.length > 1) {
+        throw Error('Array contained more than one element.');
+    }
+    return array[0];
+}
+
 enum NonEmptyArrayTag {
     Tag,
 }
